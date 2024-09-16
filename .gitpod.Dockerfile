@@ -1,8 +1,7 @@
 FROM library/archlinux
 RUN pacman -Syu --noconfirm && \
-    pacman -S --noconfirm base-devel git git-lfs htop sudo nano vim man-db zsh fish ripgrep stow which emacs-nox multitail ruby openssh \
-    lsof jq zip unzip meson docker clang lld rlwrap clojure go rustup cmake apache nginx php php-fpm php-gd php-pgsql php-sqlite python-pip nodejs npm wget \
-     && locale-gen en_US.UTF-8 
+    pacman -S --noconfirm base-devel git git-lfs htop sudo vim man-db zsh fish ripgrep stow which multitail openssh \
+    lsof jq zip unzip meson docker clang lld rlwrap clojure go rustup cmake apache nginx php php-fpm php-gd php-pgsql php-sqlite python-pip nodejs npm wget
 
 ### Gitpod user ###
 COPY sudoers /etc
