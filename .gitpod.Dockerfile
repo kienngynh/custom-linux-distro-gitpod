@@ -27,9 +27,6 @@ RUN sudo echo "Running 'sudo' for Gitpod: success" && \
     # create a completions dir for gitpod user
     mkdir -p /home/gitpod/.local/share/bash-completion/completions
 
-RUN gem install bundler --no-document \
-        && gem install solargraph --no-document
-
 # Install Homebrew
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ENV PATH=/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/:$PATH
