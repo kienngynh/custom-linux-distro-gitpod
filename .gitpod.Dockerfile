@@ -27,13 +27,6 @@ RUN sudo echo "Running 'sudo' for Gitpod: success" && \
     # create a completions dir for gitpod user
     mkdir -p /home/gitpod/.local/share/bash-completion/completions
 
-# Install some Python modules and poetry
-RUN pip install --no-cache-dir --upgrade \
-	setuptools wheel virtualenv pipenv pylint rope flake8 \
-	mypy autopep8 pep8 pylama pydocstyle bandit notebook \
-	twine && curl -sSL https://install.python-poetry.org | python
-RUN sudo rm -rf /tmp/*
-
 RUN gem install bundler --no-document \
         && gem install solargraph --no-document
 
